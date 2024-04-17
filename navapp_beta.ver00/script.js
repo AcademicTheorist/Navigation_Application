@@ -1,0 +1,208 @@
+const locations = {
+    Grade7: ["St. Lorenzo Ruiz", "St. Dominic", "St. Martin", "St. Blaise", "St. Jude", "St. John Berchmans"],
+    Grade8: ["St. Mary", "St. Elizabeth", "St. Anne", "St. Bernadeth", "St. Therese", "St. Martha"],
+    Grade9: ["St. Matthew", "St. Mark", "St. Luke", "St. John the Evangelist", "St. Thomas"],
+    Grade10: ["St. Joseph", "St. John the Baptist", "St. Peter", "St. Paul"],
+    Grade11: ["ABM - St. Theresa of Calcutta", "TVL - St. Bridgette", "HUMSS - St. Catherine of Siena", "STEM - St. Claire of Assisi", "STEM - St. Maria Goretti", "STEM - St. Rita of Cascia"],
+    Grade12: ["ABM - John Paul II", "TVL - St. Joseph the Worker", "HUMSS - St. Joseph Marello", "STEM - St. Thomas Aquinas", "STEM - St. Augustine of Hippo", "STEM - St. Albert the Great"],
+    Offices: ["Cashier", "Director", "Guidance", "Information", "Principal", "Registrar"],
+    Facilities: ["Audio Visual Room (AVR)", "Cafeteria", "Clinic", "Faculty", "Gymnasium", "Library"],
+    Laboratories: ["Computer Laboratory", "Science Laboratory", "TLE/TVL Laboratory"]
+};
+
+const locationSelect = document.getElementById("locationSelect");
+for (const category in locations) {
+    const optgroup = document.createElement("optgroup");
+    optgroup.label = category.charAt(0).toUpperCase() + category.slice(1);
+    locations[category].forEach(location => {
+        const option = document.createElement("option");
+        option.value = location;
+        option.textContent = location;
+        optgroup.appendChild(option);
+    });
+    locationSelect.appendChild(optgroup);
+}
+// For categorization in menu
+
+const locationData = {
+    // Grade 7
+    "St. Lorenzo Ruiz": {
+        image: "images/map-7lorenzo.png",
+        legends: "<img src='images/markers/location-pin.png' alt='Image 1'><p>Destination</p><img src='images/markers/user.png' alt='Image 2'><p>User Location</p>"
+    },
+    "St. Dominic": {
+        image: "images/map-7dominic.png",
+        legends: "<img src='images/markers/location-pin.png' alt='Image 1'><p>Destination</p><img src='images/markers/user.png' alt='Image 2'><p>User Location</p>"
+    },
+    "St. Martin": {
+        image: "images/map-7martin.png",
+        legends: "<img src='images/markers/location-pin.png' alt='Image 1'><p>Destination</p><img src='images/markers/user.png' alt='Image 2'><p>User Location</p>"
+    },
+    "St. Blaise": {
+        image: "images/map-7blaise.png",
+        legends: "<img src='images/markers/location-pin.png' alt='Image 1'><p>Destination</p><img src='images/markers/user.png' alt='Image 2'><p>User Location</p>"
+    },
+    "St. Jude": {
+        image: "images/map-7jude.png",
+        legends: "<img src='images/markers/location-pin.png' alt='Image 1'><p>Destination</p><img src='images/markers/user.png' alt='Image 2'><p>User Location</p>"
+    },
+    "St. John Berchmans": {
+        image: "images/map-7berchmans.png",
+        legends: "<img src='images/markers/location-pin.png' alt='Image 1'><p>Destination</p><img src='images/markers/user.png' alt='Image 2'><p>User Location</p>"
+    },
+    // Grade 8
+    "St. Mary": {
+        image: "images/map-8mary.png",
+        legends: "<img src='images/markers/location-pin.png' alt='Image 1'><p>Destination</p><img src='images/markers/user.png' alt='Image 2'><p>User Location</p>"
+    },
+    "St. Elizabeth": {
+        image: "images/map-8elizabeth.png",
+        legends: "<img src='images/markers/location-pin.png' alt='Image 1'><p>Destination</p><img src='images/markers/user.png' alt='Image 2'><p>User Location</p>"
+    },
+    "St. Anne": {
+        image: "images/map-8anne.png",
+        legends: "<img src='images/markers/location-pin.png' alt='Image 1'><p>Destination</p><img src='images/markers/user.png' alt='Image 2'><p>User Location</p>"
+    },
+    "St. Bernadeth": {
+        image: "images/map-8bernadeth.png",
+        legends: "<img src='images/markers/location-pin.png' alt='Image 1'><p>Destination</p><img src='images/markers/user.png' alt='Image 2'><p>User Location</p>"
+    },
+    "St. Therese": {
+        image: "images/map-8therese.png",
+        legends: "<img src='images/markers/location-pin.png' alt='Image 1'><p>Destination</p><img src='images/markers/user.png' alt='Image 2'><p>User Location</p>"
+    },
+    "St. Martha": {
+        image: "images/map-8martha.png",
+        legends: "<img src='images/markers/location-pin.png' alt='Image 1'><p>Destination</p><img src='images/markers/user.png' alt='Image 2'><p>User Location</p>"
+    },
+    // Grade 9
+    "St. Matthew": {
+        image: "images/map-9matthew.png",
+        legends: "<img src='images/markers/location-pin.png' alt='Image 1'><p>Destination</p><img src='images/markers/user.png' alt='Image 2'><p>User Location</p>"
+    },
+    "St. Mark": {
+        image: "images/map-9mark.png",
+        legends: "<img src='images/markers/location-pin.png' alt='Image 1'><p>Destination</p><img src='images/markers/user.png' alt='Image 2'><p>User Location</p>"
+    },
+    "St. Luke": {
+        image: "images/map-9luke.png",
+        legends: "<img src='images/markers/location-pin.png' alt='Image 1'><p>Destination</p><img src='images/markers/user.png' alt='Image 2'><p>User Location</p>"
+    },
+    "St. John the Evangelist": {
+        image: "images/map-9john.e.png",
+        legends: "<img src='images/markers/location-pin.png' alt='Image 1'><p>Destination</p><img src='images/markers/user.png' alt='Image 2'><p>User Location</p>"
+    },
+    "St. Thomas": {
+        image: "images/map-9thomas.png",
+        legends: "<img src='images/markers/location-pin.png' alt='Image 1'><p>Destination</p><img src='images/markers/user.png' alt='Image 2'><p>User Location</p>"
+    },
+    // Grade 10
+    "St. Joseph": {
+        image: "images/map-10joseph.png",
+        legends: "<img src='images/markers/location-pin.png' alt='Image 1'><p>Destination</p><img src='images/markers/user.png' alt='Image 2'><p>User Location</p>"
+    },
+    "St. John the Baptist": {
+        image: "images/map-10john.b.png",
+        legends: "<img src='images/markers/location-pin.png' alt='Image 1'><p>Destination</p><img src='images/markers/user.png' alt='Image 2'><p>User Location</p>"
+    },
+    "St. Peter": {
+        image: "images/map-10peter.png",
+        legends: "<img src='images/markers/location-pin.png' alt='Image 1'><p>Destination</p><img src='images/markers/user.png' alt='Image 2'><p>User Location</p>"
+    },
+    "St. Paul": {
+        image: "images/map-10paul.png",
+        legends: "<img src='images/markers/location-pin.png' alt='Image 1'><p>Destination</p><img src='images/markers/user.png' alt='Image 2'><p>User Location</p>"
+    },
+    // Grade 11
+    "ABM - St. Theresa of Calcutta": {
+        image: "images/map-11abm.png",
+        legends: "<img src='images/markers/location-pin.png' alt='Image 1'><p>Destination</p><img src='images/markers/user.png' alt='Image 2'><p>User Location</p>"
+    },
+    "TVL - St. Bridgette": {
+        image: "images/map-11tvl.png",
+        legends: "<img src='images/markers/location-pin.png' alt='Image 1'><p>Destination</p><img src='images/markers/user.png' alt='Image 2'><p>User Location</p>"
+    },
+    "HUMSS - St. Catherine of Siena": {
+        image: "images/map-11humss.png",
+        legends: "<img src='images/markers/location-pin.png' alt='Image 1'><p>Destination</p><img src='images/markers/user.png' alt='Image 2'><p>User Location</p>"
+    },
+    "STEM - St. Claire of Assisi": {
+        image: "images/map-11stem.a.png",
+        legends: "<img src='images/markers/location-pin.png' alt='Image 1'><p>Destination</p><img src='images/markers/user.png' alt='Image 2'><p>User Location</p>"
+    },
+    "STEM - St. Maria Goretti": {
+        image: "images/map-11stem.b.png",
+        legends: "<img src='images/markers/location-pin.png' alt='Image 1'><p>Destination</p><img src='images/markers/user.png' alt='Image 2'><p>User Location</p>"
+    },
+    "STEM - St. Rita of Cascia": {
+        image: "images/map-11stem.c.png",
+        legends: "<img src='images/markers/location-pin.png' alt='Image 1'><p>Destination</p><img src='images/markers/user.png' alt='Image 2'><p>User Location</p>"
+    },
+    // Grade 12
+    "ABM - St. John Paul II": {
+        image: "images/map-12abm.png",
+        legends: "<img src='images/markers/location-pin.png' alt='Image 1'><p>Destination</p><img src='images/markers/user.png' alt='Image 2'><p>User Location</p>"
+    },
+    "TVL - St. Joseph the Worker": {
+        image: "images/map-12tvl.png",
+        legends: "<img src='images/markers/location-pin.png' alt='Image 1'><p>Destination</p><img src='images/markers/user.png' alt='Image 2'><p>User Location</p>"
+    },
+    "HUMSS - St. Joseph Marello": {
+        image: "images/map-12humss.png",
+        legends: "<img src='images/markers/location-pin.png' alt='Image 1'><p>Destination</p><img src='images/markers/user.png' alt='Image 2'><p>User Location</p>"
+    },
+    "STEM - St. Thomas Aquinas": {
+        image: "images/map-12stem.a.png",
+        legends: "<img src='images/markers/location-pin.png' alt='Image 1'><p>Destination</p><img src='images/markers/user.png' alt='Image 2'><p>User Location</p>"
+    },
+    "STEM - St. Augustine of Hippo": {
+        image: "images/map-12stem.b.png",
+        legends: "<img src='images/markers/location-pin.png' alt='Image 1'><p>Destination</p><img src='images/markers/user.png' alt='Image 2'><p>User Location</p>"
+    },
+    "STEM - St. Albert the Great": {
+        image: "images/map-12stem.c.png",
+        legends: "<img src='images/markers/location-pin.png' alt='Image 1'><p>Destination</p><img src='images/markers/user.png' alt='Image 2'><p>User Location</p>"
+    },
+
+    // Add data for other locations with actual image paths and legends
+};
+
+locationSelect.addEventListener("change", function() {
+    const selectedLocation = this.value;
+    const locationInfo = locationData[selectedLocation];
+    if (locationInfo) {
+        // Remove previously displayed frame and legends section
+        const existingContainer = document.getElementById("locationContainer");
+        if (existingContainer) {
+            existingContainer.remove();
+        }
+
+        // Create a container for the frame and legends section
+        const container = document.createElement("div");
+        container.id = "locationContainer";
+        container.style.display = "flex"; // Use flexbox for layout
+        container.style.alignItems = "center"; // Center items vertically
+
+        // Display new frame (image)
+        const frame = document.createElement("img"); // Use img tag for the image
+        frame.id = "displayedFrame";
+        frame.src = locationInfo.image; // Set image source
+        frame.style.maxWidth = "80%"; // Image takes maximum 50% of container width
+        frame.style.height = "auto"; // Maintain aspect ratio
+        container.appendChild(frame);
+
+        // Display new legends section beside the frame (image) inside the container
+        const legendsSection = document.createElement("div");
+        legendsSection.id = "legendsSection";
+        legendsSection.innerHTML = `<h2>Legends and Notes for ${selectedLocation}</h2>${locationInfo.legends}`;
+        legendsSection.style.width = "20%"; // Legends section takes 50% of container width
+        legendsSection.style.padding = "20px"; // Add padding for readability
+        legendsSection.style.backgroundColor = "rgba(0, 123, 255, 0.7)"; // Blueish color with transparency
+        legendsSection.style.color = "#fff"; // White text color for readability
+        legendsSection.style.overflowY = "auto"; // Enable scrolling if content exceeds container height
+        container.appendChild(legendsSection);
+
+        // Append the container to the document body
+        document.body.appendChild(container);
+    }
+});
