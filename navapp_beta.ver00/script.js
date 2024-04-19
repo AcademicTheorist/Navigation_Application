@@ -1,11 +1,11 @@
 const locations = {
+    Offices: ["Cashier", "Director", "Guidance", "Information", "Principal", "Registrar"],
     Grade7: ["St. Lorenzo Ruiz", "St. Dominic", "St. Martin", "St. Blaise", "St. Jude", "St. John Berchmans"],
     Grade8: ["St. Mary", "St. Elizabeth", "St. Anne", "St. Bernadeth", "St. Therese", "St. Martha"],
     Grade9: ["St. Matthew", "St. Mark", "St. Luke", "St. John the Evangelist", "St. Thomas"],
     Grade10: ["St. Joseph", "St. John the Baptist", "St. Peter", "St. Paul"],
     Grade11: ["ABM - St. Theresa of Calcutta", "TVL - St. Bridgette", "HUMSS - St. Catherine of Siena", "STEM - St. Claire of Assisi", "STEM - St. Maria Goretti", "STEM - St. Rita of Cascia"],
     Grade12: ["ABM - John Paul II", "TVL - St. Joseph the Worker", "HUMSS - St. Joseph Marello", "STEM - St. Thomas Aquinas", "STEM - St. Augustine of Hippo", "STEM - St. Albert the Great"],
-    Offices: ["Cashier", "Director", "Guidance", "Information", "Principal", "Registrar"],
     Facilities: ["Audio Visual Room (AVR)", "Cafeteria", "Clinic", "Faculty", "Gymnasium", "Library"],
     Laboratories: ["Computer Laboratory", "Science Laboratory", "TLE/TVL Laboratory"]
 };
@@ -140,11 +140,11 @@ const locationData = {
     },
     // Grade 12
     "ABM - St. John Paul II": {
-        image: "images/map-12abm.png",
+        image: "images/map-12abm.tvl.png",
         legends: "<img src='images/markers/location-pin.png' alt='Image 1'><p>Destination</p><img src='images/markers/user.png' alt='Image 2'><p>User Location</p>"
     },
     "TVL - St. Joseph the Worker": {
-        image: "images/map-12tvl.png",
+        image: "images/map-12abm.tvl.png",
         legends: "<img src='images/markers/location-pin.png' alt='Image 1'><p>Destination</p><img src='images/markers/user.png' alt='Image 2'><p>User Location</p>"
     },
     "HUMSS - St. Joseph Marello": {
@@ -163,9 +163,72 @@ const locationData = {
         image: "images/map-12stem.c.png",
         legends: "<img src='images/markers/location-pin.png' alt='Image 1'><p>Destination</p><img src='images/markers/user.png' alt='Image 2'><p>User Location</p>"
     },
-
+    // Offices
+    "Cashier": {
+        image: "images/loc.png",
+        legends: "<img src='images/markers/location-pin.png' alt='Image 1'><p>Destination</p><img src='images/markers/user.png' alt='Image 2'><p>User Location</p>"
+    },
+    "Director": {
+        image: "images/loc.png",
+        legends: "<img src='images/markers/location-pin.png' alt='Image 1'><p>Destination</p><img src='images/markers/user.png' alt='Image 2'><p>User Location</p>"
+    },
+    "Guidance": {
+        image: "images/loc.png",
+        legends: "<img src='images/markers/location-pin.png' alt='Image 1'><p>Destination</p><img src='images/markers/user.png' alt='Image 2'><p>User Location</p>"
+    },
+    "Information": {
+        image: "images/loc.png",
+        legends: "<img src='images/markers/location-pin.png' alt='Image 1'><p>Destination</p><img src='images/markers/user.png' alt='Image 2'><p>User Location</p>"
+    },
+    "Principal": {
+        image: "images/loc.png",
+        legends: "<img src='images/markers/location-pin.png' alt='Image 1'><p>Destination</p><img src='images/markers/user.png' alt='Image 2'><p>User Location</p>"
+    },
+    "Registrar": {
+        image: "images/loc.png",
+        legends: "<img src='images/markers/location-pin.png' alt='Image 1'><p>Destination</p><img src='images/markers/user.png' alt='Image 2'><p>User Location</p>"
+    },
+    // Facilities
+    "Audio Visual Room (AVR)": {
+        image: "images/loc.png",
+        legends: "<img src='images/markers/location-pin.png' alt='Image 1'><p>Destination</p><img src='images/markers/user.png' alt='Image 2'><p>User Location</p>"
+    },
+    "Cafeteria": {
+        image: "images/loc.png",
+        legends: "<img src='images/markers/location-pin.png' alt='Image 1'><p>Destination</p><img src='images/markers/user.png' alt='Image 2'><p>User Location</p>"
+    },
+    "Clinic": {
+        image: "images/loc.png",
+        legends: "<img src='images/markers/location-pin.png' alt='Image 1'><p>Destination</p><img src='images/markers/user.png' alt='Image 2'><p>User Location</p>"
+    },
+    "Faculty": {
+        image: "images/loc.png",
+        legends: "<img src='images/markers/location-pin.png' alt='Image 1'><p>Destination</p><img src='images/markers/user.png' alt='Image 2'><p>User Location</p>"
+    },
+    "Gymnasium": {
+        image: "images/loc.png",
+        legends: "<img src='images/markers/location-pin.png' alt='Image 1'><p>Destination</p><img src='images/markers/user.png' alt='Image 2'><p>User Location</p>"
+    },
+    "Library": {
+        image: "images/loc.png",
+        legends: "<img src='images/markers/location-pin.png' alt='Image 1'><p>Destination</p><img src='images/markers/user.png' alt='Image 2'><p>User Location</p>"
+    },
+    // Laboratories
+    "Computer Laboratory": {
+        image: "images/loc.png",
+        legends: "<img src='images/markers/location-pin.png' alt='Image 1'><p>Destination</p><img src='images/markers/user.png' alt='Image 2'><p>User Location</p>"
+    },
+    "Science Laboratory": {
+        image: "images/loc.png",
+        legends: "<img src='images/markers/location-pin.png' alt='Image 1'><p>Destination</p><img src='images/markers/user.png' alt='Image 2'><p>User Location</p>"
+    },
+    "TLE/TVL Laboratory": {
+        image: "images/loc.png",
+        legends: "<img src='images/markers/location-pin.png' alt='Image 1'><p>Destination</p><img src='images/markers/user.png' alt='Image 2'><p>User Location</p>"
+    },
     // Add data for other locations with actual image paths and legends
 };
+// Datas for selected locations
 
 locationSelect.addEventListener("change", function() {
     const selectedLocation = this.value;
@@ -194,7 +257,7 @@ locationSelect.addEventListener("change", function() {
         // Display new legends section beside the frame (image) inside the container
         const legendsSection = document.createElement("div");
         legendsSection.id = "legendsSection";
-        legendsSection.innerHTML = `<h2>Legends and Notes for ${selectedLocation}</h2>${locationInfo.legends}`;
+        legendsSection.innerHTML = `<h2>Legends for ${selectedLocation}</h2>${locationInfo.legends}`;
         legendsSection.style.width = "20%"; // Legends section takes 50% of container width
         legendsSection.style.padding = "20px"; // Add padding for readability
         legendsSection.style.backgroundColor = "rgba(0, 123, 255, 0.7)"; // Blueish color with transparency
@@ -205,4 +268,19 @@ locationSelect.addEventListener("change", function() {
         // Append the container to the document body
         document.body.appendChild(container);
     }
+});
+
+// Get the logo image element
+const logoImage = document.getElementById("logoImage");
+
+// Add click event listener to the logo image
+logoImage.addEventListener("click", function() {
+    // Remove the container holding the displayed image and legends section
+    const existingContainer = document.getElementById("locationContainer");
+    if (existingContainer) {
+        existingContainer.remove();
+    }
+
+    // Reset the selected option in the selection menu
+    locationSelect.selectedIndex = 0;
 });

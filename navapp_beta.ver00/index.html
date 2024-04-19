@@ -1,16 +1,35 @@
 <style>
     body {
-        background-image: url('https://github.com/Gabes28/Navigation-Website/blob/main/DAZSMABackground.jpg?raw=true');
-        background-size: cover;
+        background-image: url('images/temp/bg-3.jpg');
+        background-size: 100% 100%; /* Cover the entire background */
+        background-repeat: no-repeat; /* Prevent background image from repeating */
+        background-position: center center; /* Center the background image */
     }
     </style>
-    <header style="background-color: rgba(255, 255, 255, 0.7); padding: 10px;">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwPYZ3FDkeALcL4vzBY6Ll99CJt9z6ufG41Zkzmf3xhg&s" alt="Logo" style="height: 50px; width: auto;">
-        <h1>DAZSMA Campus Navigation Application</h1>
+    <header style="background-color: rgba(0, 123, 255, 0.7); padding: 10px; display: flex; align-items: center;">
+        <img id="logoImage" src="images/temp/logo.jpg" alt="Logo" title="Home" style="height: 50px; width: auto; cursor:pointer">
+        <h1 style="margin-left: 10px;">Don Antonio de Zuzuarregui Sr. Memorial Academy Campus Navigation Application</h1>
     </header>
+    <!-- For semi-transparent header and logo -->
     <select id="locationSelect">
         <option value="" selected disabled>Select a location...</option>
         <!-- Add options dynamically using JavaScript -->
     </select>
+    <style>
+        /* Tooltip text */
+        #logoImage:hover::before {
+            content: attr(title);
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 5px;
+            border-radius: 5px;
+            font-size: 12px;
+            bottom: 110%;
+            left: 50%;
+            transform: translateX(-50%);
+            white-space: nowrap;
+        }
+    </style>
     
     <script src="script.js"></script>
